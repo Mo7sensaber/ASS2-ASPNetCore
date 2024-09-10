@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AboutUS</title>
+    <link href="~/lib\bootstrap\css\bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @* start Header *@
+    <nav class="mt-5">
+        <center>
+            <a class="btn btn-primary" asp-controller="Home" asp-action="Index"> Home </a>
+            <a class="btn btn-secondary" asp-controller="Home" asp-action="AboutUs">about Us</a>
+            <a class="btn btn-success" asp-controller="Home" asp-action="Privacy" >Privacy</a>
+            <a class="btn btn-warning" asp-controller="Home" asp-action="ContactUs">Contact Us</a>
+            <a class="btn btn-info" asp-controller="Account" asp-action="Register">Register</a>
+            <a class="btn btn-danger" asp-controller="Account" asp-action="Login">Login</a>
+        </center>
+    </nav>
+    @* End Header *@
+    <div>
+        @RenderBody()
+    </div>
+    @* start footer *@
+    <footer class="mt-5">
+        <center>
+            <div>
+                <p>CopyRights &copy; Route @DateTime.Now.Year</p>
+            </div>
+        </center>
+    </footer>
+    @* End footer *@
+</body>
+</html>
